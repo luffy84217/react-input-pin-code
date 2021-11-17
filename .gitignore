@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Compiled distribution
+dist/
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+
+# npm pack
+*.tgz
