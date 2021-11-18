@@ -13,6 +13,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   index,
   value,
   values,
+  mask,
   onChange,
 }) => {
   const inputRef = useRef<HTMLInputElement>();
@@ -84,6 +85,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   return (
     <Input
       ref={inputRef}
+      type={mask ? 'password' : 'text'}
       placeholder="o"
       value={value}
       onChange={handleInputChange}

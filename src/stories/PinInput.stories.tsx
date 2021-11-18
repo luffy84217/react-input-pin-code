@@ -37,3 +37,10 @@ export const PinLength = Template.bind({});
 PinLength.args = {
   values: ['', '', '', '', '', '', ''],
 };
+
+export const Masking = Template.bind({});
+
+Masking.args = {
+  values: ['', '', '', ''],
+  mask: true,
+};

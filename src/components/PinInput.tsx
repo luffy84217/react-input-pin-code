@@ -6,20 +6,15 @@ import PinInputField from './PinInputField';
 
 const propTypes = {
   values: PropTypes.arrayOf(PropTypes.string),
+  mask: PropTypes.bool,
   onChange: PropTypes.func,
 };
 
-const PinInput: React.FC<PinInputProps> = ({ values, onChange }) => {
+const PinInput: React.FC<PinInputProps> = (props) => {
   return (
     <PinInputContainer>
-      {values.map((value, i) => (
-        <PinInputField
-          key={i}
-          index={i}
-          value={value}
-          values={values}
-          onChange={onChange}
-        />
+      {props.values.map((value, i) => (
+        <PinInputField key={i} index={i} value={value} {...props} />
       ))}
     </PinInputContainer>
   );
@@ -27,5 +22,8 @@ const PinInput: React.FC<PinInputProps> = ({ values, onChange }) => {
 
 PinInput.displayName = 'PinInput';
 PinInput.propTypes = propTypes;
+PinInput.defaultProps = {
+  mask: false,
+};
 
 export default PinInput;
