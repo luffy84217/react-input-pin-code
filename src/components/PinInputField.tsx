@@ -13,7 +13,9 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   index,
   value,
   values,
+  type,
   mask,
+  inputMode,
   onChange,
 }) => {
   const inputRef = useRef<HTMLInputElement>();
@@ -48,22 +50,29 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       }
     }
 
-    // auto-tab to the pin input
-    let inputEl: Element = inputRef.current;
-    for (let i = 0; i < newValue.length; i++) {
-      inputEl = inputEl.nextElementSibling;
-    }
-    if (newValue && inputEl instanceof HTMLInputElement) {
-      inputEl.focus();
-    }
-
     if (onChange) {
+      const regex = type === 'number' ? /(^$)|(\d+)/ : /.*/;
+      let shouldFireChange: boolean;
+
       if (Array.isArray(newValue)) {
         newValue.forEach((val, i) => (newValues[index + i] = val));
+        shouldFireChange = newValue.every((val) => regex.test(val));
       } else {
         newValues[index] = newValue;
+        shouldFireChange = regex.test(newValue);
       }
-      onChange(newValue, index, newValues);
+      if (shouldFireChange) {
+        onChange(newValue, index, newValues);
+
+        // auto-tab to the specified pin input
+        let inputEl: Element = inputRef.current;
+        for (let i = 0; i < newValue.length; i++) {
+          inputEl = inputEl.nextElementSibling;
+        }
+        if (newValue && inputEl instanceof HTMLInputElement) {
+          inputEl.focus();
+        }
+      }
     }
   };
   const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
@@ -86,6 +95,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
     <Input
       ref={inputRef}
       type={mask ? 'password' : 'text'}
+      inputMode={inputMode || (type === 'number' ? 'numeric' : 'text')}
       placeholder="o"
       value={value}
       onChange={handleInputChange}

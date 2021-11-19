@@ -30,6 +30,7 @@ export const Basic = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Basic.args = {
   values: ['', '', '', ''],
+  type: 'number',
 };
 
 export const PinLength = Template.bind({});

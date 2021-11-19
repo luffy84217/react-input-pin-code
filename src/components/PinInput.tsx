@@ -6,6 +6,7 @@ import PinInputField from './PinInputField';
 
 const propTypes = {
   values: PropTypes.arrayOf(PropTypes.string),
+  type: PropTypes.oneOf<'number' | 'text'>(['number', 'text']),
   mask: PropTypes.bool,
   onChange: PropTypes.func,
 };
@@ -23,6 +24,7 @@ const PinInput: React.FC<PinInputProps> = (props) => {
 PinInput.displayName = 'PinInput';
 PinInput.propTypes = propTypes;
 PinInput.defaultProps = {
+  type: 'number',
   mask: false,
 };
 

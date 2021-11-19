@@ -1,11 +1,6 @@
-export interface PinInputFieldProps {
+import { PinInputProps } from './PinInput';
+
+export type PinInputFieldProps = {
   index: number;
   value: string;
-  values: string[];
-  mask?: boolean;
-  onChange?: (
-    value: string | string[],
-    index: number,
-    values: string[]
-  ) => void;
-}
+} & PinInputProps;
