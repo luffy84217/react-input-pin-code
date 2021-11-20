@@ -22,6 +22,7 @@ const Template: ComponentStory<typeof PinInput> = (args) => {
         setValues(values);
         console.log(value, index, values);
       }}
+      onComplete={(values) => console.log(values)}
     />
   );
 };
@@ -31,6 +32,8 @@ export const Basic = Template.bind({});
 Basic.args = {
   values: ['', '', '', ''],
   type: 'number',
+  mask: false,
+  showState: true,
 };
 
 export const PinLength = Template.bind({});
@@ -39,9 +42,25 @@ PinLength.args = {
   values: ['', '', '', '', '', '', ''],
 };
 
+export const TextInput = Template.bind({});
+
+TextInput.args = {
+  values: ['', '', '', ''],
+  type: 'text',
+};
+
 export const Masking = Template.bind({});
 
 Masking.args = {
   values: ['', '', '', ''],
   mask: true,
+};
+
+export const Validation = Template.bind({});
+
+Validation.args = {
+  values: ['a', 'b', 'd', ''],
+  type: 'text',
+  validate: 'abc',
+  showState: true,
 };

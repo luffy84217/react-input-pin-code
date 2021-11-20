@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Input } from '../styles/PinInputField';
 import { PinInputFieldProps } from '../types/PinInputField';
+import { validateToPattern } from '../utils';
 
 const propTypes = {
   index: PropTypes.number,
@@ -13,8 +14,11 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   index,
   value,
   values,
+  completed,
   type,
   mask,
+  validate,
+  showState,
   inputMode,
   onChange,
 }) => {
@@ -91,17 +95,22 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
     e.target.placeholder = 'o';
   };
 
+  const pattern = useMemo(() => validateToPattern(validate), [validate]);
+
   return (
     <Input
       ref={inputRef}
       type={mask ? 'password' : 'text'}
       inputMode={inputMode || (type === 'number' ? 'numeric' : 'text')}
       placeholder="o"
+      pattern={pattern}
       value={value}
       onChange={handleInputChange}
       onKeyDown={handleKeyDown}
       onFocus={handleInputFocus}
       onBlur={handleInputBlur}
+      completed={completed}
+      showState={showState}
     />
   );
 };
