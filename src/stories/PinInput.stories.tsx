@@ -42,6 +42,13 @@ PinLength.args = {
   values: ['', '', '', '', '', '', ''],
 };
 
+export const Size = Template.bind({});
+
+Size.args = {
+  values: ['', '', '', '', '', '', ''],
+  size: 'lg',
+};
+
 export const TextInput = Template.bind({});
 
 TextInput.args = {

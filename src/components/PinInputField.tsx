@@ -17,6 +17,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   completed,
   type,
   mask,
+  size,
   validate,
   showState,
   inputMode,
@@ -111,6 +112,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       onBlur={handleInputBlur}
       completed={completed}
       showState={showState}
+      sizing={size}
     />
   );
 };

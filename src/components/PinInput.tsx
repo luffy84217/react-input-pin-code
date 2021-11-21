@@ -15,6 +15,7 @@ const propTypes = {
     PropTypes.instanceOf(RegExp),
   ]),
   showState: PropTypes.bool,
+  size: PropTypes.oneOf<'xs' | 'sm' | 'md' | 'lg'>(['xs', 'sm', 'md', 'lg']),
   onChange: PropTypes.func,
 };
 
@@ -59,6 +60,7 @@ PinInput.defaultProps = {
   type: 'number',
   mask: false,
   showState: true,
+  size: 'md',
 };
 
 export default PinInput;
