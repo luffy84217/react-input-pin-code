@@ -21,6 +21,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   validate,
   showState,
   inputMode,
+  inputStyle,
   onChange,
 }) => {
   const inputRef = useRef<HTMLInputElement>();
@@ -113,6 +114,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       completed={completed}
       showState={showState}
       sizing={size}
+      style={inputStyle}
     />
   );
 };

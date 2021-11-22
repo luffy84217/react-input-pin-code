@@ -71,3 +71,15 @@ Validation.args = {
   validate: 'abc',
   showState: true,
 };
+
+export const CustomStyle = Template.bind({});
+
+CustomStyle.args = {
+  values: ['', '', '', ''],
+  containerStyle: {
+    backgroundColor: 'orange',
+  },
+  inputStyle: {
+    backgroundColor: 'yellow',
+  },
+};

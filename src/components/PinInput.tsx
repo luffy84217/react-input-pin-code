@@ -16,6 +16,8 @@ const propTypes = {
   ]),
   showState: PropTypes.bool,
   size: PropTypes.oneOf<'xs' | 'sm' | 'md' | 'lg'>(['xs', 'sm', 'md', 'lg']),
+  containerStyle: PropTypes.object,
+  inputStyle: PropTypes.object,
   onChange: PropTypes.func,
 };
 
@@ -40,7 +42,7 @@ const PinInput: React.FC<PinInputProps> = (props) => {
   }
 
   return (
-    <PinInputContainer>
+    <PinInputContainer style={props.containerStyle}>
       {props.values.map((value, i) => (
         <PinInputField
           key={i}
@@ -61,6 +63,8 @@ PinInput.defaultProps = {
   mask: false,
   showState: true,
   size: 'md',
+  containerStyle: {},
+  inputStyle: {},
 };
 
 export default PinInput;
