@@ -33,7 +33,11 @@ Basic.args = {
   values: ['', '', '', ''],
   type: 'number',
   mask: false,
+  size: 'md',
   showState: true,
+  autoFocus: false,
+  autoTab: true,
+  placeholder: 'o',
 };
 
 export const PinLength = Template.bind({});
@@ -96,4 +100,18 @@ export const CustomPlaceholder = Template.bind({});
 CustomPlaceholder.args = {
   values: ['', '', '', ''],
   placeholder: '😀',
+};
+
+export const AutoFocu = Template.bind({});
+
+AutoFocu.args = {
+  values: ['', '', '', ''],
+  autoFocus: true,
+};
+
+export const DisableAutoTab = Template.bind({});
+
+DisableAutoTab.args = {
+  values: ['', '', '', ''],
+  autoTab: false,
 };

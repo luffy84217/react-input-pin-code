@@ -1,4 +1,4 @@
-import React, { useMemo, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Input } from '../styles/PinInputField';
 import { PinInputFieldProps } from '../types/PinInputField';
@@ -20,6 +20,8 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   size,
   validate,
   showState,
+  autoFocus,
+  autoTab,
   'aria-describedby': ariaDescribedby,
   'aria-label': ariaLabel,
   'aria-labelledby': ariaLabelledby,
@@ -89,7 +91,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
         for (let i = 0; i < newValue.length; i++) {
           inputEl = inputEl.nextElementSibling;
         }
-        if (newValue && inputEl instanceof HTMLInputElement) {
+        if (newValue && autoTab && inputEl instanceof HTMLInputElement) {
           inputEl.focus();
         }
       }
@@ -121,6 +123,13 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   };
 
   const pattern = useMemo(() => validateToPattern(validate), [validate]);
+
+  // auto-focus on mount
+  useEffect(() => {
+    if (autoFocus && index === 0) {
+      inputRef.current.focus();
+    }
+  }, [autoFocus, index]);
 
   return (
     <Input

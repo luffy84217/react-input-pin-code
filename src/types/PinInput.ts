@@ -7,6 +7,8 @@ export type PinInputProps = {
   size?: 'xs' | 'sm' | 'md' | 'lg';
   validate?: string | string[] | RegExp;
   showState?: boolean;
+  autoFocus?: boolean;
+  autoTab?: boolean;
   containerStyle?: React.CSSProperties;
   inputStyle?: React.CSSProperties;
   errorBorderColor?: string;
