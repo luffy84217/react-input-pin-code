@@ -72,6 +72,13 @@ Validation.args = {
   showState: true,
 };
 
+export const Disabled = Template.bind({});
+
+Disabled.args = {
+  values: ['', '', '', ''],
+  disabled: true,
+};
+
 export const CustomStyle = Template.bind({});
 
 CustomStyle.args = {
@@ -82,4 +89,11 @@ CustomStyle.args = {
   inputStyle: {
     backgroundColor: 'yellow',
   },
+};
+
+export const CustomPlaceholder = Template.bind({});
+
+CustomPlaceholder.args = {
+  values: ['', '', '', ''],
+  placeholder: '😀',
 };

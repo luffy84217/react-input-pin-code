@@ -20,9 +20,23 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   size,
   validate,
   showState,
+  'aria-describedby': ariaDescribedby,
+  'aria-label': ariaLabel,
+  'aria-labelledby': ariaLabelledby,
+  autoComplete,
+  disabled,
   inputMode,
+  name,
+  placeholder,
+  required,
   inputStyle,
+  errorBorderColor,
+  focusBorderColor,
+  validBorderColor,
   onChange,
+  onBlur,
+  onFocus,
+  onKeyDown,
 }) => {
   const inputRef = useRef<HTMLInputElement>();
 
@@ -89,12 +103,21 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
         prevInput.focus();
       }
     }
+    if (onKeyDown) {
+      onKeyDown(e);
+    }
   };
   const handleInputFocus: React.FocusEventHandler<HTMLInputElement> = (e) => {
     e.target.placeholder = '';
+    if (onFocus) {
+      onFocus(e);
+    }
   };
   const handleInputBlur: React.FocusEventHandler<HTMLInputElement> = (e) => {
-    e.target.placeholder = 'o';
+    e.target.placeholder = placeholder;
+    if (onBlur) {
+      onBlur(e);
+    }
   };
 
   const pattern = useMemo(() => validateToPattern(validate), [validate]);
@@ -103,8 +126,18 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
     <Input
       ref={inputRef}
       type={mask ? 'password' : 'text'}
+      aria-autoComplete={autoComplete}
+      aira-describedby={ariaDescribedby}
+      aria-disabled={disabled}
+      aria-label={ariaLabel}
+      aria-labelledby={ariaLabelledby}
+      aria-required={required}
+      autoComplete={autoComplete}
+      disabled={disabled}
+      name={name}
       inputMode={inputMode || (type === 'number' ? 'numeric' : 'text')}
-      placeholder="o"
+      required={required}
+      placeholder={placeholder}
       pattern={pattern}
       value={value}
       onChange={handleInputChange}
@@ -115,6 +148,10 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       showState={showState}
       sizing={size}
       style={inputStyle}
+      errorBorderColor={errorBorderColor}
+      focusBorderColor={focusBorderColor}
+      validBorderColor={validBorderColor}
+      data-index={index}
     />
   );
 };

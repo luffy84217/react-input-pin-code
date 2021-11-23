@@ -1,9 +1,13 @@
 import styled from 'styled-components';
+import { hexToRgb } from '../utils';
 
 export const Input = styled.input<{
   completed: boolean;
   showState: boolean;
   sizing: 'xs' | 'sm' | 'md' | 'lg';
+  errorBorderColor: string;
+  focusBorderColor: string;
+  validBorderColor: string;
 }>`
   width: ${({ sizing }) => {
     switch (sizing) {
@@ -58,26 +62,49 @@ export const Input = styled.input<{
   background-color: inherit;
   box-sizing: border-box;
   &:focus {
-    border-color: #0d6efd;
-    box-shadow: #0d6efd 0px 0px 0px 1px;
+    border-color: ${({ focusBorderColor }) => focusBorderColor || '#0d6efd'};
+    box-shadow: ${({ focusBorderColor }) => focusBorderColor || '#0d6efd'} 0px
+      0px 0px 1px;
   }
   &:last-child {
     margin-right: 0;
   }
-  ${({ completed, showState }) =>
-    completed && showState
+  ${({ completed, showState, validBorderColor }) => {
+    const rgb = hexToRgb(validBorderColor);
+
+    return completed && showState
       ? `&:valid {
-    border-color: rgb(25, 135, 84);
-    box-shadow: rgb(25, 135, 84) 0px 0px 0px 1px;
-    background-color: rgba(25, 135, 84, 0.1);
+    border-color: ${
+      rgb ? `rgb(${rgb.r}, ${rgb.b}, ${rgb.g})` : 'rgb(25, 135, 84)'
+    };
+    box-shadow: ${
+      rgb ? `rgb(${rgb.r}, ${rgb.b}, ${rgb.g})` : 'rgb(25, 135, 84)'
+    } 0px 0px 0px 1px;
+    background-color: ${
+      rgb ? `rgba(${rgb.r}, ${rgb.b}, ${rgb.g}, 0.1)` : 'rgba(25, 135, 84, 0.1)'
+    };
   }`
-      : ''}
-  ${({ showState }) =>
-    showState
+      : '';
+  }}
+  ${({ showState, errorBorderColor }) => {
+    const rgb = hexToRgb(errorBorderColor);
+
+    return showState
       ? `&:invalid {
-    border-color: rgb(220, 53, 69);
-    box-shadow: rgb(220, 53, 69) 0px 0px 0px 1px;
-    background-color: rgba(220, 53, 69, 0.1);
+    border-color: ${
+      rgb ? `rgb(${rgb.r}, ${rgb.b}, ${rgb.g})` : 'rgb(220, 53, 69)'
+    };
+    box-shadow: ${
+      rgb ? `rgb(${rgb.r}, ${rgb.b}, ${rgb.g})` : 'rgb(220, 53, 69)'
+    } 0px 0px 0px 1px;
+    background-color: ${
+      rgb ? `rgba(${rgb.r}, ${rgb.b}, ${rgb.g}, 0.1)` : 'rgb(220, 53, 69, 0.1)'
+    };
   }`
-      : ''}
+      : '';
+  }}
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `;

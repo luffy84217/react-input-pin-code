@@ -45,7 +45,7 @@ const PinInput: React.FC<PinInputProps> = (props) => {
     <PinInputContainer style={props.containerStyle}>
       {props.values.map((value, i) => (
         <PinInputField
-          key={i}
+          key={props.id ? `${props.id}-${i}` : i}
           index={i}
           value={value}
           completed={completed}
@@ -65,6 +65,9 @@ PinInput.defaultProps = {
   size: 'md',
   containerStyle: {},
   inputStyle: {},
+  autoComplete: 'off',
+  placeholder: 'o',
+  'aria-label': 'Please enter pin code',
 };
 
 export default PinInput;
