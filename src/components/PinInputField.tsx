@@ -19,6 +19,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   mask,
   size,
   validate,
+  format,
   showState,
   autoFocus,
   autoTab,
@@ -76,6 +77,14 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       const regex = type === 'number' ? /(^$)|(\d+)/ : /.*/;
       let shouldFireChange: boolean;
 
+      // apply formatter to transform
+      if (format) {
+        if (Array.isArray(newValue)) {
+          newValue = newValue.map((val) => format(val));
+        } else {
+          newValue = format(newValue);
+        }
+      }
       if (Array.isArray(newValue)) {
         newValue.forEach((val, i) => (newValues[index + i] = val));
         shouldFireChange = newValue.every((val) => regex.test(val));

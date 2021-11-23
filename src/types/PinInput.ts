@@ -6,6 +6,7 @@ export type PinInputProps = {
   mask?: boolean;
   size?: 'xs' | 'sm' | 'md' | 'lg';
   validate?: string | string[] | RegExp;
+  format?: (char: string) => string;
   showState?: boolean;
   autoFocus?: boolean;
   autoTab?: boolean;

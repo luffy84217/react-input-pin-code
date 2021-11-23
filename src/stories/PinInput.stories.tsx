@@ -76,6 +76,14 @@ Validation.args = {
   showState: true,
 };
 
+export const Formatter = Template.bind({});
+
+Formatter.args = {
+  values: ['', '', '', ''],
+  type: 'text',
+  format: (char: string) => char.toUpperCase(),
+};
+
 export const Disabled = Template.bind({});
 
 Disabled.args = {

@@ -14,6 +14,7 @@ const propTypes = {
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.instanceOf(RegExp),
   ]),
+  format: PropTypes.func,
   showState: PropTypes.bool,
   size: PropTypes.oneOf<'xs' | 'sm' | 'md' | 'lg'>(['xs', 'sm', 'md', 'lg']),
   autoFocus: PropTypes.bool,
