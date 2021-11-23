@@ -144,7 +144,6 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
     <Input
       ref={inputRef}
       type={mask ? 'password' : 'text'}
-      aria-autoComplete={autoComplete}
       aira-describedby={ariaDescribedby}
       aria-disabled={disabled}
       aria-label={ariaLabel}
