@@ -107,7 +107,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
     }
   };
   const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
-    if (e.key === 'Backspace' && values[index] === '' && index > 0) {
+    if (e.key === 'Backspace' && autoTab && values[index] === '' && index > 0) {
       const prevInput = inputRef.current.previousElementSibling;
 
       if (prevInput instanceof HTMLInputElement) {
