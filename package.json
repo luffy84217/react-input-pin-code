@@ -32,7 +32,7 @@
     "prepare": "husky install",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "validate": "npm run typecheck && npm run build && npm run lint && npm test"
+    "validate": "npm run typecheck && npm run build && npm run lint && npm test -- --coverage"
   },
   "keywords": [
     "react",
