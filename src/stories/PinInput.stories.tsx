@@ -4,7 +4,7 @@ import PinInput from '../components/PinInput';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/PinInput',
+  title: 'Components/PinInput',
   component: PinInput,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

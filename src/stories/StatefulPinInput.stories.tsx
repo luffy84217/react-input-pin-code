@@ -4,7 +4,7 @@ import StatefulPinInput from '../components/StatefulPinInput';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/StatefulPinInput',
+  title: 'Components/StatefulPinInput',
   component: StatefulPinInput,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
