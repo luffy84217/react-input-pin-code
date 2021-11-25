@@ -29,6 +29,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   autoComplete,
   disabled,
   inputMode,
+  id,
   name,
   placeholder,
   required,
@@ -152,6 +153,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       autoComplete={autoComplete}
       disabled={disabled}
       name={name}
+      id={id && `${id}-${index}`}
       inputMode={inputMode || (type === 'number' ? 'numeric' : 'text')}
       required={required}
       placeholder={placeholder}

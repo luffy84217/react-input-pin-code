@@ -67,6 +67,14 @@ Masking.args = {
   mask: true,
 };
 
+export const IDAndName = Template.bind({});
+
+IDAndName.args = {
+  values: ['', '', '', ''],
+  id: 'foo',
+  name: 'bar',
+};
+
 export const Validation = Template.bind({});
 
 Validation.args = {
