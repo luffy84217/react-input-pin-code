@@ -1,6 +1,6 @@
 {
   "name": "react-input-pin-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pin input built with React component and styled-components",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -8,10 +8,10 @@
   "files": [
     "dist"
   ],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/luffy84217/react-input-pin-code.git"
-	},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/luffy84217/react-input-pin-code.git"
+  },
   "scripts": {
     "start": "npm run storybook",
     "build": "rollup --config",
