@@ -8,6 +8,10 @@
   "files": [
     "dist"
   ],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/luffy84217/react-input-pin-code.git"
+	},
   "scripts": {
     "start": "npm run storybook",
     "build": "rollup --config",
