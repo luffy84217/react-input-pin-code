@@ -22,6 +22,7 @@ const Template: ComponentStory<typeof PinInput> = (args) => {
         setValues(values);
         console.log(value, index, values);
       }}
+      onComplete={(values) => console.log(values)}
     />
   );
 };
@@ -30,10 +31,103 @@ export const Basic = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Basic.args = {
   values: ['', '', '', ''],
+  type: 'number',
+  mask: false,
+  size: 'md',
+  showState: true,
+  autoFocus: false,
+  autoTab: true,
+  placeholder: 'o',
 };
 
 export const PinLength = Template.bind({});
 
 PinLength.args = {
   values: ['', '', '', '', '', '', ''],
+};
+
+export const Size = Template.bind({});
+
+Size.args = {
+  values: ['', '', '', '', '', '', ''],
+  size: 'lg',
+};
+
+export const TextInput = Template.bind({});
+
+TextInput.args = {
+  values: ['', '', '', ''],
+  type: 'text',
+};
+
+export const Masking = Template.bind({});
+
+Masking.args = {
+  values: ['', '', '', ''],
+  mask: true,
+};
+
+export const IDAndName = Template.bind({});
+
+IDAndName.args = {
+  values: ['', '', '', ''],
+  id: 'foo',
+  name: 'bar',
+};
+
+export const Validation = Template.bind({});
+
+Validation.args = {
+  values: ['a', 'b', 'd', ''],
+  type: 'text',
+  validate: 'abc',
+  showState: true,
+};
+
+export const Formatter = Template.bind({});
+
+Formatter.args = {
+  values: ['', '', '', ''],
+  type: 'text',
+  format: (char: string) => char.toUpperCase(),
+};
+
+export const Disabled = Template.bind({});
+
+Disabled.args = {
+  values: ['', '', '', ''],
+  disabled: true,
+};
+
+export const CustomStyle = Template.bind({});
+
+CustomStyle.args = {
+  values: ['', '', '', ''],
+  containerStyle: {
+    backgroundColor: 'orange',
+  },
+  inputStyle: {
+    backgroundColor: 'yellow',
+  },
+};
+
+export const CustomPlaceholder = Template.bind({});
+
+CustomPlaceholder.args = {
+  values: ['', '', '', ''],
+  placeholder: '😀',
+};
+
+export const AutoFocu = Template.bind({});
+
+AutoFocu.args = {
+  values: ['', '', '', ''],
+  autoFocus: true,
+};
+
+export const DisableAutoTab = Template.bind({});
+
+DisableAutoTab.args = {
+  values: ['', '', '', ''],
+  autoTab: false,
 };
