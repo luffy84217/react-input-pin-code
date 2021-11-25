@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/luffy84217/react-pin-input/compare/v0.1.1...v0.2.0) (2021-11-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename package name
+
+* rename package name ([99c898a](https://github.com/luffy84217/react-pin-input/commit/99c898a0be6df73d3288f4a8a56ebfd166efe675))
+
 ### 0.1.1 (2021-11-25)
 
 
