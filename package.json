@@ -12,6 +12,7 @@
     "type": "git",
     "url": "git://github.com/luffy84217/react-input-pin-code.git"
   },
+  "homepage": "https://luffy84217.github.io/react-input-pin-code/",
   "scripts": {
     "start": "npm run storybook",
     "build": "rollup --config",
