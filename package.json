@@ -1,5 +1,5 @@
 {
-  "name": "react-pin-input",
+  "name": "react-pin-code",
   "version": "0.1.1",
   "description": "Pin input built with React component and styled-components",
   "main": "dist/index.js",
@@ -33,8 +33,10 @@
     "react",
     "react-components",
     "styled-components",
+    "component",
     "input",
-    "pin"
+    "pin",
+    "code"
   ],
   "author": {
     "name": "Asriel Yu",
