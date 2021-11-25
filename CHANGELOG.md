@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.0.0](https://github.com/luffy84217/react-pin-input/compare/v0.4.0...v1.0.0) (2021-11-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* **release:** release first major version
+
 ## [0.4.0](https://github.com/luffy84217/react-pin-input/compare/v0.3.1...v0.4.0) (2021-11-25)
 
 
