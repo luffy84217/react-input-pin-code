@@ -18,11 +18,7 @@ const Template: ComponentStory<typeof PinInput> = (args) => {
     <PinInput
       {...args}
       values={values}
-      onChange={(value, index, values) => {
-        setValues(values);
-        console.log(value, index, values);
-      }}
-      onComplete={(values) => console.log(values)}
+      onChange={(_value, _index, values) => setValues(values)}
     />
   );
 };
