@@ -1,19 +1,19 @@
-# React Pin Input
+# React Input Pin Code
 
 An accessible and simple pin input component built with styled-components for ReactJS.
 
 ## Demo
 
-[Here](https://luffy84217.github.io/react-pin-input/) to see documentation and examples.
+[Here](https://luffy84217.github.io/react-input-pin-code/) to see documentation and examples.
 
-Source code at https://github.com/luffy84217/react-pin-input.
+Source code at https://github.com/luffy84217/react-input-pin-code.
 
 ## Installation
 
 To get started, install and save in your `package.json` dependencies, run:
 
 ```bash
-npm install react-pin-input styled-components
+npm install react-input-pin-code styled-components
 ```
 
 Please note that [styled-components](https://styled-components.com/) is peer dependency.
@@ -23,16 +23,16 @@ Please note that [styled-components](https://styled-components.com/) is peer dep
 You can use the following two ways to import module.
 
 ```javascript
-import { PinInput } from 'react-pin-input' // ES Module
+import { PinInput } from 'react-input-pin-code' // ES Module
 or
-var PinInput = require('react-pin-input').PinInput // CommonJS Module
+var PinInput = require('react-input-pin-code').PinInput // CommonJS Module
 ```
 
 ## Usage
 ### Basic Example
 ```jsx
 import React from 'react';
-import { PinInput } from 'react-pin-input';
+import { PinInput } from 'react-input-pin-code';
 
 export default () => {
   const [values, setValues] = React.useState(['', '', '']);
@@ -124,7 +124,7 @@ There is also an [uncontrolled](https://reactjs.org/docs/uncontrolled-components
 
 ```jsx
 import React from 'react';
-import { StatefulPinInput } from 'react-pin-input';
+import { StatefulPinInput } from 'react-input-pin-code';
 
 export default () => {
   return (
