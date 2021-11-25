@@ -38,3 +38,6 @@ jobs:
       
     - name: ✅ Run validate script
       run: npm run validate
+      
+    - name: ⬆️ Upload coverage report
+      uses: codecov/codecov-action@v1
