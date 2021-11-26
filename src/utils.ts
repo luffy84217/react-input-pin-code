@@ -10,15 +10,22 @@ export const validateToPattern = (
   } else if (validate instanceof RegExp) {
     const regex = validate.toString();
     return regex.slice(1, regex.length - 1);
+  } else {
+    return '';
   }
 };
 export const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  if (hex === undefined) return null;
+  const shorthand = /^#?[a-fA-Z\d]{3}$/i.test(hex);
+  const result = shorthand
+    ? /^#?([a-f\d])([a-f\d])([a-f\d])$/i.exec(hex)
+    : /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+
   return result
     ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
+        r: parseInt(shorthand ? result[1] + result[1] : result[1], 16),
+        g: parseInt(shorthand ? result[2] + result[2] : result[2], 16),
+        b: parseInt(shorthand ? result[3] + result[3] : result[3], 16),
       }
     : null;
 };
