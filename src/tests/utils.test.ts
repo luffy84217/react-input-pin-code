@@ -7,8 +7,8 @@ describe('validateToPattern', () => {
     expect(validateToPattern(/a|b|c/)).toBe('a|b|c');
   });
 
-  it('should return empty string', () => {
-    expect(validateToPattern(undefined)).toBe('');
+  it('should return undefined', () => {
+    expect(validateToPattern(undefined)).toBeUndefined();
   });
 });
 

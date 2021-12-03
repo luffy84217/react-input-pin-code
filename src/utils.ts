@@ -11,7 +11,7 @@ export const validateToPattern = (
     const regex = validate.toString();
     return regex.slice(1, regex.length - 1);
   } else {
-    return '';
+    return undefined;
   }
 };
 export const hexToRgb = (hex: string): { r: number; g: number; b: number } => {
