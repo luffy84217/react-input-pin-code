@@ -19,8 +19,6 @@ export const Input = styled.input<{
         return '2.5rem';
       case 'lg':
         return '3rem';
-      default:
-        return '2.5rem';
     }
   }};
   height: ${({ sizing }) => {
@@ -33,8 +31,6 @@ export const Input = styled.input<{
         return '2.5rem';
       case 'lg':
         return '3rem';
-      default:
-        return '2.5rem';
     }
   }};
   margin-right: 0.375rem;
@@ -50,8 +46,6 @@ export const Input = styled.input<{
         return '1rem';
       case 'lg':
         return '1.125rem';
-      default:
-        return '1rem';
     }
   }};
   text-align: center;
@@ -75,13 +69,13 @@ export const Input = styled.input<{
     return completed && showState
       ? `&:valid {
     border-color: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.b}, ${rgb.g})` : 'rgb(25, 135, 84)'
+      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : 'rgb(25, 135, 84)'
     };
     box-shadow: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.b}, ${rgb.g})` : 'rgb(25, 135, 84)'
+      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : 'rgb(25, 135, 84)'
     } 0px 0px 0px 1px;
     background-color: ${
-      rgb ? `rgba(${rgb.r}, ${rgb.b}, ${rgb.g}, 0.1)` : 'rgba(25, 135, 84, 0.1)'
+      rgb ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)` : 'rgba(25, 135, 84, 0.1)'
     };
   }`
       : '';
@@ -92,13 +86,13 @@ export const Input = styled.input<{
     return showState
       ? `&:invalid {
     border-color: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.b}, ${rgb.g})` : 'rgb(220, 53, 69)'
+      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : 'rgb(220, 53, 69)'
     };
     box-shadow: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.b}, ${rgb.g})` : 'rgb(220, 53, 69)'
+      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : 'rgb(220, 53, 69)'
     } 0px 0px 0px 1px;
     background-color: ${
-      rgb ? `rgba(${rgb.r}, ${rgb.b}, ${rgb.g}, 0.1)` : 'rgb(220, 53, 69, 0.1)'
+      rgb ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)` : 'rgb(220, 53, 69, 0.1)'
     };
   }`
       : '';
