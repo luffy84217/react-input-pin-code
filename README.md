@@ -1,6 +1,12 @@
 # React Input Pin Code
 
-An accessible and simple pin input component built with styled-components for ReactJS.
+[![Validate](https://github.com/luffy84217/react-input-pin-code/actions/workflows/validate.yml/badge.svg)](https://github.com/luffy84217/react-input-pin-code/actions/workflows/validate.yml)
+[![codecov](https://codecov.io/gh/luffy84217/react-input-pin-code/branch/main/graph/badge.svg?token=QSHM2A3C5V)](https://codecov.io/gh/luffy84217/react-input-pin-code)
+![npm](https://img.shields.io/npm/v/react-input-pin-code)
+![NPM](https://img.shields.io/npm/l/react-input-pin-code)
+[![storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)](https://luffy84217.github.io/react-input-pin-code/)
+
+> An accessible and simple pin input component built with styled-components for ReactJS.
 
 ## Demo
 
