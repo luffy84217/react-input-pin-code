@@ -1,4 +1,6 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
+import 'jest-styled-components';
 import { fireEvent, render } from '@testing-library/react';
 import PinInput from '../components/PinInput';
 import StatefulPinInput from '../components/StatefulPinInput';
@@ -146,6 +148,23 @@ describe('Pin Input', () => {
       <PinInput values={['', '', '', '']} size="xs" />
     );
     const PinInputFields = getAllByRole('textbox') as HTMLInputElement[];
+    const xsTree = renderer
+      .create(<PinInput values={['', '', '', '']} size="xs" />)
+      .toJSON();
+    const smTree = renderer
+      .create(<PinInput values={['', '', '', '']} size="sm" />)
+      .toJSON();
+    const mdTree = renderer
+      .create(<PinInput values={['', '', '', '']} size="md" />)
+      .toJSON();
+    const lgTree = renderer
+      .create(<PinInput values={['', '', '', '']} size="lg" />)
+      .toJSON();
+
+    expect(xsTree).toMatchSnapshot();
+    expect(smTree).toMatchSnapshot();
+    expect(mdTree).toMatchSnapshot();
+    expect(lgTree).toMatchSnapshot();
 
     PinInputFields.forEach((input) => {
       expect(input).toHaveStyle({ width: '1.5rem' });
@@ -173,7 +192,13 @@ describe('Pin Input', () => {
       <PinInput values={['1', '2', '3', '4']} validBorderColor="#198754" />
     );
     const PinInputFields = getAllByRole('textbox') as HTMLInputElement[];
+    const validTree = renderer
+      .create(
+        <PinInput values={['1', '2', '3', '4']} validBorderColor="#198754" />
+      )
+      .toJSON();
 
+    expect(validTree).toMatchSnapshot();
     expect(PinInputFields[0]).toHaveStyle('border-color: rgb(25,135,84)');
 
     rerender(
@@ -183,6 +208,17 @@ describe('Pin Input', () => {
         errorBorderColor="#dc3545"
       />
     );
+    const invalidTree = renderer
+      .create(
+        <PinInput
+          values={['a', 'b', 'c', 'd']}
+          validate="abc"
+          errorBorderColor="#dc3545"
+        />
+      )
+      .toJSON();
+
+    expect(invalidTree).toMatchSnapshot();
 
     expect(PinInputFields[3]).toHaveStyle('border-color: rgb(220,53,69)');
   });
@@ -192,7 +228,11 @@ describe('Pin Input', () => {
       <PinInput values={['1', '2', '3', '4']} showState={false} />
     );
     const PinInputFields = getAllByRole('textbox') as HTMLInputElement[];
+    const tree = renderer
+      .create(<PinInput values={['1', '2', '3', '4']} showState={false} />)
+      .toJSON();
 
+    expect(tree).toMatchSnapshot();
     expect(PinInputFields[0]).toHaveStyle('border-color: #cccccc');
   });
 
