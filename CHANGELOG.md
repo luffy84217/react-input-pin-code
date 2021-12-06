@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/luffy84217/react-input-pin-code/compare/v1.0.1...v1.0.2) (2021-12-06)
+
+
+### Bug Fixes
+
+* border color cannot be shorthand hex notation ([a9bb7c3](https://github.com/luffy84217/react-input-pin-code/commit/a9bb7c383f5de6087dc4b661139484433d71b7c6))
+* input pattern attribue is null by default ([c5208d6](https://github.com/luffy84217/react-input-pin-code/commit/c5208d6b497cea27068a8f1281b882d8a8789fbe))
+* typo ([b77efe1](https://github.com/luffy84217/react-input-pin-code/commit/b77efe155551ea5ca37495c5769ef43b9bdec560))
+
 ### [1.0.1](https://github.com/luffy84217/react-input-pin-code/compare/v1.0.0...v1.0.1) (2021-11-25)
 
 # [1.0.0](https://github.com/luffy84217/react-pin-input/compare/v0.4.0...v1.0.0) (2021-11-25)
