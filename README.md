@@ -21,6 +21,8 @@ To get started, install and save in your `package.json` dependencies, run:
 
 ```bash
 npm install react-input-pin-code styled-components
+or
+yarn add react-input-pin-code styled-components
 ```
 
 Please note that [styled-components](https://styled-components.com/) is peer dependency.
