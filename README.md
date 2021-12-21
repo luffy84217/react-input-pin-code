@@ -2,6 +2,7 @@
 
 [![Validate](https://github.com/luffy84217/react-input-pin-code/actions/workflows/validate.yml/badge.svg)](https://github.com/luffy84217/react-input-pin-code/actions/workflows/validate.yml)
 [![CircleCI](https://circleci.com/gh/luffy84217/react-input-pin-code/tree/main.svg?style=shield)](https://circleci.com/gh/luffy84217/react-input-pin-code/tree/main)
+[![Build Status](https://app.travis-ci.com/luffy84217/react-input-pin-code.svg?branch=main)](https://app.travis-ci.com/luffy84217/react-input-pin-code)
 [![codecov](https://codecov.io/gh/luffy84217/react-input-pin-code/branch/main/graph/badge.svg?token=QSHM2A3C5V)](https://codecov.io/gh/luffy84217/react-input-pin-code)
 ![npm](https://img.shields.io/npm/v/react-input-pin-code)
 ![NPM](https://img.shields.io/npm/l/react-input-pin-code)
