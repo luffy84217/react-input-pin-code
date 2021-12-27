@@ -23,14 +23,14 @@ exports[`Pin Input should render correct style when border color is provided 1`]
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: rgb(204,204,204);
   background-color: inherit;
   box-sizing: border-box;
 }
 
 .c1:focus {
-  border-color: #0d6efd;
-  box-shadow: #0d6efd 0px 0px 0px 1px;
+  border-color: rgb(13,110,253);
+  box-shadow: rgb(13,110,253) 0px 0px 0px 1px;
 }
 
 .c1:last-child {
@@ -144,14 +144,14 @@ exports[`Pin Input should render correct style when border color is provided 2`]
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: rgb(204,204,204);
   background-color: inherit;
   box-sizing: border-box;
 }
 
 .c1:focus {
-  border-color: #0d6efd;
-  box-shadow: #0d6efd 0px 0px 0px 1px;
+  border-color: rgb(13,110,253);
+  box-shadow: rgb(13,110,253) 0px 0px 0px 1px;
 }
 
 .c1:last-child {
@@ -269,14 +269,14 @@ exports[`Pin Input should render correct style when size is provided 1`] = `
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: rgb(204,204,204);
   background-color: inherit;
   box-sizing: border-box;
 }
 
 .c1:focus {
-  border-color: #0d6efd;
-  box-shadow: #0d6efd 0px 0px 0px 1px;
+  border-color: rgb(13,110,253);
+  box-shadow: rgb(13,110,253) 0px 0px 0px 1px;
 }
 
 .c1:last-child {
@@ -384,14 +384,14 @@ exports[`Pin Input should render correct style when size is provided 2`] = `
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: rgb(204,204,204);
   background-color: inherit;
   box-sizing: border-box;
 }
 
 .c1:focus {
-  border-color: #0d6efd;
-  box-shadow: #0d6efd 0px 0px 0px 1px;
+  border-color: rgb(13,110,253);
+  box-shadow: rgb(13,110,253) 0px 0px 0px 1px;
 }
 
 .c1:last-child {
@@ -499,14 +499,14 @@ exports[`Pin Input should render correct style when size is provided 3`] = `
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: rgb(204,204,204);
   background-color: inherit;
   box-sizing: border-box;
 }
 
 .c1:focus {
-  border-color: #0d6efd;
-  box-shadow: #0d6efd 0px 0px 0px 1px;
+  border-color: rgb(13,110,253);
+  box-shadow: rgb(13,110,253) 0px 0px 0px 1px;
 }
 
 .c1:last-child {
@@ -614,14 +614,14 @@ exports[`Pin Input should render correct style when size is provided 4`] = `
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: rgb(204,204,204);
   background-color: inherit;
   box-sizing: border-box;
 }
 
 .c1:focus {
-  border-color: #0d6efd;
-  box-shadow: #0d6efd 0px 0px 0px 1px;
+  border-color: rgb(13,110,253);
+  box-shadow: rgb(13,110,253) 0px 0px 0px 1px;
 }
 
 .c1:last-child {
@@ -729,14 +729,14 @@ exports[`Pin Input should render correct when showState is false 1`] = `
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: rgb(204,204,204);
   background-color: inherit;
   box-sizing: border-box;
 }
 
 .c1:focus {
-  border-color: #0d6efd;
-  box-shadow: #0d6efd 0px 0px 0px 1px;
+  border-color: rgb(13,110,253);
+  box-shadow: rgb(13,110,253) 0px 0px 0px 1px;
 }
 
 .c1:last-child {

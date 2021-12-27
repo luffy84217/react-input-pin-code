@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { fireEvent, render } from '@testing-library/react';
-import PinInput from '../components/PinInput';
+import PinInput, { defaultProps } from '../components/PinInput';
 import StatefulPinInput from '../components/StatefulPinInput';
 
 describe('Pin Input', () => {
@@ -223,6 +223,43 @@ describe('Pin Input', () => {
     expect(PinInputFields[3]).toHaveStyle('border-color: rgb(220,53,69)');
   });
 
+  it('should render default style if color input is invalid', () => {
+    const { getAllByRole, rerender } = render(
+      <PinInput values={['1', '2', '3', '4']} validBorderColor="#1987544" />
+    );
+    const PinInputFields = getAllByRole('textbox') as HTMLInputElement[];
+
+    expect(PinInputFields[0]).toHaveStyle(
+      `border-color: ${defaultProps.validBorderColor}`
+    );
+
+    rerender(
+      <PinInput
+        values={['a', 'b', 'c', 'd']}
+        validate="abc"
+        errorBorderColor="#dc35455"
+      />
+    );
+
+    expect(PinInputFields[3]).toHaveStyle(
+      `border-color: ${defaultProps.errorBorderColor}`
+    );
+
+    rerender(<PinInput values={['', '', '', '']} borderColor="#ccccccc" />);
+
+    expect(PinInputFields[0]).toHaveStyle(
+      `border-color: ${defaultProps.borderColor}`
+    );
+
+    rerender(
+      <PinInput values={['', '', '', '']} focusBorderColor="#1945877" />
+    );
+    fireEvent.click(PinInputFields[0]);
+    expect(PinInputFields[0]).toHaveStyle(
+      `border-color: ${defaultProps.borderColor}`
+    );
+  });
+
   it('should render correct when showState is false', () => {
     const { getAllByRole } = render(
       <PinInput values={['1', '2', '3', '4']} showState={false} />
@@ -233,7 +270,9 @@ describe('Pin Input', () => {
       .toJSON();
 
     expect(tree).toMatchSnapshot();
-    expect(PinInputFields[0]).toHaveStyle('border-color: #cccccc');
+    expect(PinInputFields[0]).toHaveStyle(
+      `border-color: ${defaultProps.borderColor}`
+    );
   });
 
   it('should auto fill when input is mulitple characters', () => {
