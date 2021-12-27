@@ -158,9 +158,9 @@ export default () => {
 | autoComplete | string | "off" | Determines if browser should provide value suggestions. |
 | autoFocus | boolean | false | If true the input will be focused on the first mount. |
 | autoTab | boolean | true | If true focus will move automatically to the next/previous input once filled or deleted |
-| errorBorderColor | string |  | Let you customize border color when the input is invalid. (string **MUST** be hex code.)
-| focusBorderColor | string |  | Let you customize border color when the input is focused. (string **MUST** be hex code.)
-| validBorderColor | string |  | Let you customize border color when the input is valid. (string **MUST** be hex code.)
+| errorBorderColor | string |  | Let you customize border color when the input is invalid.
+| focusBorderColor | string |  | Let you customize border color when the input is focused.
+| validBorderColor | string |  | Let you customize border color when the input is valid.
 | disabled | boolean |  | Renders component in disabled state. |
 | format | (char: string) => string |  | Pure function to transform raw input. |
 | id | string |  | Id attribute value to be added to the input element and as a label's for attribute value. |

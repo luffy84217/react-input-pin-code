@@ -95,6 +95,15 @@ Disabled.args = {
   disabled: true,
 };
 
+export const BorderColor = Template.bind({});
+
+BorderColor.args = {
+  values: ['', '', '', ''],
+  errorBorderColor: 'rgb(220, 53, 69)',
+  focusBorderColor: '#0d6efd',
+  validBorderColor: 'rgb(25, 135, 84)',
+};
+
 export const CustomStyle = Template.bind({});
 
 CustomStyle.args = {

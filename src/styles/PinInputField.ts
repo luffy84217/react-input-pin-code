@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { hexToRgb } from '../utils';
+import { colorParser } from '../utils';
 
 export const Input = styled.input<{
   completed: boolean;
@@ -64,7 +64,7 @@ export const Input = styled.input<{
     margin-right: 0;
   }
   ${({ completed, showState, validBorderColor }) => {
-    const rgb = hexToRgb(validBorderColor);
+    const rgb = colorParser(validBorderColor);
 
     return completed && showState
       ? `&:valid {
@@ -81,7 +81,7 @@ export const Input = styled.input<{
       : '';
   }}
   ${({ showState, errorBorderColor }) => {
-    const rgb = hexToRgb(errorBorderColor);
+    const rgb = colorParser(errorBorderColor);
 
     return showState
       ? `&:invalid {
