@@ -46,7 +46,7 @@ exports[`Pin Input should render correct style when border color is provided 1`]
 .c1:invalid {
   border-color: rgb(220,53,69);
   box-shadow: rgb(220,53,69) 0px 0px 0px 1px;
-  background-color: rgb(220,53,69,0.1);
+  background-color: rgba(220,53,69,0.1);
 }
 
 .c1:disabled {
@@ -286,7 +286,7 @@ exports[`Pin Input should render correct style when size is provided 1`] = `
 .c1:invalid {
   border-color: rgb(220,53,69);
   box-shadow: rgb(220,53,69) 0px 0px 0px 1px;
-  background-color: rgb(220,53,69,0.1);
+  background-color: rgba(220,53,69,0.1);
 }
 
 .c1:disabled {
@@ -401,7 +401,7 @@ exports[`Pin Input should render correct style when size is provided 2`] = `
 .c1:invalid {
   border-color: rgb(220,53,69);
   box-shadow: rgb(220,53,69) 0px 0px 0px 1px;
-  background-color: rgb(220,53,69,0.1);
+  background-color: rgba(220,53,69,0.1);
 }
 
 .c1:disabled {
@@ -516,7 +516,7 @@ exports[`Pin Input should render correct style when size is provided 3`] = `
 .c1:invalid {
   border-color: rgb(220,53,69);
   box-shadow: rgb(220,53,69) 0px 0px 0px 1px;
-  background-color: rgb(220,53,69,0.1);
+  background-color: rgba(220,53,69,0.1);
 }
 
 .c1:disabled {
@@ -631,7 +631,7 @@ exports[`Pin Input should render correct style when size is provided 4`] = `
 .c1:invalid {
   border-color: rgb(220,53,69);
   box-shadow: rgb(220,53,69) 0px 0px 0px 1px;
-  background-color: rgb(220,53,69,0.1);
+  background-color: rgba(220,53,69,0.1);
 }
 
 .c1:disabled {

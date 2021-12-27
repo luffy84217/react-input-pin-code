@@ -5,6 +5,7 @@ export const Input = styled.input<{
   completed: boolean;
   showState: boolean;
   sizing: 'xs' | 'sm' | 'md' | 'lg';
+  borderColor: string;
   errorBorderColor: string;
   focusBorderColor: string;
   validBorderColor: string;
@@ -52,13 +53,12 @@ export const Input = styled.input<{
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: ${({ borderColor }) => borderColor};
   background-color: inherit;
   box-sizing: border-box;
   &:focus {
-    border-color: ${({ focusBorderColor }) => focusBorderColor || '#0d6efd'};
-    box-shadow: ${({ focusBorderColor }) => focusBorderColor || '#0d6efd'} 0px
-      0px 0px 1px;
+    border-color: ${({ focusBorderColor }) => focusBorderColor};
+    box-shadow: ${({ focusBorderColor }) => focusBorderColor} 0px 0px 0px 1px;
   }
   &:last-child {
     margin-right: 0;
@@ -69,13 +69,15 @@ export const Input = styled.input<{
     return completed && showState
       ? `&:valid {
     border-color: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : 'rgb(25, 135, 84)'
+      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : validBorderColor
     };
     box-shadow: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : 'rgb(25, 135, 84)'
+      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : validBorderColor
     } 0px 0px 0px 1px;
     background-color: ${
-      rgb ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)` : 'rgba(25, 135, 84, 0.1)'
+      rgb
+        ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)`
+        : validBorderColor.replace('rgb', 'rgba').replace(')', ', 0.1)')
     };
   }`
       : '';
@@ -86,13 +88,15 @@ export const Input = styled.input<{
     return showState
       ? `&:invalid {
     border-color: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : 'rgb(220, 53, 69)'
+      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : errorBorderColor
     };
     box-shadow: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : 'rgb(220, 53, 69)'
+      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : errorBorderColor
     } 0px 0px 0px 1px;
     background-color: ${
-      rgb ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)` : 'rgb(220, 53, 69, 0.1)'
+      rgb
+        ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)`
+        : errorBorderColor.replace('rgb', 'rgba').replace(')', ', 0.1)')
     };
   }`
       : '';

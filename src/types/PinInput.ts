@@ -12,6 +12,7 @@ export type PinInputProps = {
   autoTab?: boolean;
   containerStyle?: React.CSSProperties;
   inputStyle?: React.CSSProperties;
+  borderColor?: string;
   errorBorderColor?: string;
   focusBorderColor?: string;
   validBorderColor?: string;

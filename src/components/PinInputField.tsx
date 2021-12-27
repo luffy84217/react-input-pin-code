@@ -34,6 +34,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   placeholder,
   required,
   inputStyle,
+  borderColor,
   errorBorderColor,
   focusBorderColor,
   validBorderColor,
@@ -167,6 +168,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       showState={showState}
       sizing={size}
       style={inputStyle}
+      borderColor={borderColor}
       errorBorderColor={errorBorderColor}
       focusBorderColor={focusBorderColor}
       validBorderColor={validBorderColor}
