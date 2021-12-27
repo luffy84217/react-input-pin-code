@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/luffy84217/react-input-pin-code/compare/v1.0.2...v1.1.0) (2021-12-27)
+
+
+### Features
+
+* add borderColor prop and refactor ([ec941a5](https://github.com/luffy84217/react-input-pin-code/commit/ec941a5517ec6b390cb2f625f5f746bef9a18f5f))
+* border color support rgb pattern ([dccb140](https://github.com/luffy84217/react-input-pin-code/commit/dccb140dc329478db624fa6c41cd24acc3559526))
+
 ### [1.0.2](https://github.com/luffy84217/react-input-pin-code/compare/v1.0.1...v1.0.2) (2021-12-06)
 
 
