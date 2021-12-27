@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { defaultProps } from '../components/PinInput';
 import { colorParser } from '../utils';
 
 export const Input = styled.input<{
@@ -53,11 +54,21 @@ export const Input = styled.input<{
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: ${({ borderColor }) => borderColor};
+  border-color: ${({ borderColor }) => {
+    const rgb = colorParser(borderColor);
+
+    return rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.borderColor;
+  }};
   background-color: inherit;
   box-sizing: border-box;
   &:focus {
-    border-color: ${({ focusBorderColor }) => focusBorderColor};
+    border-color: ${({ focusBorderColor }) => {
+      const rgb = colorParser(focusBorderColor);
+
+      return rgb
+        ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
+        : defaultProps.focusBorderColor;
+    }};
     box-shadow: ${({ focusBorderColor }) => focusBorderColor} 0px 0px 0px 1px;
   }
   &:last-child {
@@ -69,15 +80,17 @@ export const Input = styled.input<{
     return completed && showState
       ? `&:valid {
     border-color: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : validBorderColor
+      rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.validBorderColor
     };
     box-shadow: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : validBorderColor
+      rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.validBorderColor
     } 0px 0px 0px 1px;
     background-color: ${
       rgb
-        ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)`
-        : validBorderColor.replace('rgb', 'rgba').replace(')', ', 0.1)')
+        ? `rgba(${rgb.r},${rgb.g},${rgb.b},0.1)`
+        : defaultProps.validBorderColor
+            .replace('rgb', 'rgba')
+            .replace(')', ',0.1)')
     };
   }`
       : '';
@@ -88,15 +101,17 @@ export const Input = styled.input<{
     return showState
       ? `&:invalid {
     border-color: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : errorBorderColor
+      rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.errorBorderColor
     };
     box-shadow: ${
-      rgb ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : errorBorderColor
+      rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.errorBorderColor
     } 0px 0px 0px 1px;
     background-color: ${
       rgb
-        ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1)`
-        : errorBorderColor.replace('rgb', 'rgba').replace(')', ', 0.1)')
+        ? `rgba(${rgb.r},${rgb.g},${rgb.b},0.1)`
+        : defaultProps.errorBorderColor
+            .replace('rgb', 'rgba')
+            .replace(')', ',0.1)')
     };
   }`
       : '';

@@ -24,6 +24,24 @@ const propTypes = {
   onChange: PropTypes.func,
 };
 
+export const defaultProps: Partial<PinInputProps> = {
+  type: 'number',
+  mask: false,
+  showState: true,
+  size: 'md',
+  autoFocus: false,
+  autoTab: true,
+  borderColor: 'rgb(204,204,204)',
+  errorBorderColor: 'rgb(220,53,69)',
+  focusBorderColor: 'rgb(13,110,253)',
+  validBorderColor: 'rgb(25,135,84)',
+  containerStyle: {},
+  inputStyle: {},
+  autoComplete: 'off',
+  placeholder: 'o',
+  'aria-label': 'Please enter pin code',
+};
+
 const PinInput: React.FC<PinInputProps> = (props) => {
   const completed = useMemo(
     () => props.values.every((val) => val),
@@ -61,22 +79,6 @@ const PinInput: React.FC<PinInputProps> = (props) => {
 
 PinInput.displayName = 'PinInput';
 PinInput.propTypes = propTypes;
-PinInput.defaultProps = {
-  type: 'number',
-  mask: false,
-  showState: true,
-  size: 'md',
-  autoFocus: false,
-  autoTab: true,
-  borderColor: '#cccccc',
-  errorBorderColor: 'rgb(220, 53, 69)',
-  focusBorderColor: '#0d6efd',
-  validBorderColor: 'rgb(25, 135, 84)',
-  containerStyle: {},
-  inputStyle: {},
-  autoComplete: 'off',
-  placeholder: 'o',
-  'aria-label': 'Please enter pin code',
-};
+PinInput.defaultProps = defaultProps;
 
 export default PinInput;
