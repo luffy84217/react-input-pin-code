@@ -12,6 +12,8 @@
 
 ## Demo
 
+![image](https://user-images.githubusercontent.com/28497046/147468428-b1bb0e98-70a3-4874-b9e8-b9701fdb2781.png)
+
 [Here](https://luffy84217.github.io/react-input-pin-code/) to see documentation and examples.
 
 Source code at https://github.com/luffy84217/react-input-pin-code.
@@ -22,7 +24,9 @@ To get started, install and save in your `package.json` dependencies, run:
 
 ```bash
 npm install react-input-pin-code styled-components
+```
 or
+```bash
 yarn add react-input-pin-code styled-components
 ```
 
@@ -158,9 +162,10 @@ export default () => {
 | autoComplete | string | "off" | Determines if browser should provide value suggestions. |
 | autoFocus | boolean | false | If true the input will be focused on the first mount. |
 | autoTab | boolean | true | If true focus will move automatically to the next/previous input once filled or deleted |
-| errorBorderColor | string |  | Let you customize border color when the input is invalid.
-| focusBorderColor | string |  | Let you customize border color when the input is focused.
-| validBorderColor | string |  | Let you customize border color when the input is valid.
+| borderColor | string | rgb(204,204,204) | Let you customize border color when the input is not focused.
+| errorBorderColor | string | rgb(220,53,69) | Let you customize border color when the input is invalid.
+| focusBorderColor | string | rgb(13,110,253) | Let you customize border color when the input is focused.
+| validBorderColor | string | rgb(25,135,84) | Let you customize border color when the input is valid.
 | disabled | boolean |  | Renders component in disabled state. |
 | format | (char: string) => string |  | Pure function to transform raw input. |
 | id | string |  | Id attribute value to be added to the input element and as a label's for attribute value. |
