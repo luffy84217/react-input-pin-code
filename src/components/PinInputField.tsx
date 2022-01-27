@@ -20,7 +20,7 @@ const normalizeNewValue = (currentValue, eventValue) => {
   }
 
   if (eventValue === '') {
-    return [''];
+    return [];
   }
 
   if (currentValue[0] === eventValue[0]) {
