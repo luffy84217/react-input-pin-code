@@ -10,6 +10,26 @@ const propTypes = {
   onChange: PropTypes.func,
 };
 
+const normalizeNewValue = (currentValue, eventValue) => {
+  if (!currentValue) {
+    return eventValue.split('');
+  }
+
+  if (eventValue.length > 2) {
+    return eventValue.split('');
+  }
+
+  if (eventValue === '') {
+    return [''];
+  }
+
+  if (currentValue[0] === eventValue[0]) {
+    return [eventValue[1]];
+  }
+
+  return [eventValue[0]];
+};
+
 const PinInputField: React.FC<PinInputFieldProps> = ({
   index,
   value,
@@ -48,64 +68,34 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     const currentValue = values[index];
     const eventValue = e.target.value;
-    let newValue: string | string[];
     const newValues = [...values];
+    const rawValue: string[] = normalizeNewValue(currentValue, eventValue);
+    const regex = type === 'number' ? /(^$)|(\d+)/ : /.*/;
+    const shouldFireChange: boolean = rawValue.every((val) => regex.test(val));
 
-    if (currentValue) {
-      // in the case of copy and paste
-      if (eventValue.length > 2) {
-        newValue = eventValue.split('');
-        // digit was deleted
-      } else if (eventValue === '') {
-        newValue = '';
-      } else {
-        // override the input value with the last digit typed
-        if (currentValue[0] === eventValue[0]) {
-          newValue = eventValue[1];
-        } else if (currentValue[0] === eventValue[1]) {
-          newValue = eventValue[0];
-        }
-      }
-    } else {
-      // in the case of copy and paste
-      if (eventValue.length > 1) {
-        newValue = eventValue.split('');
-      } else {
-        newValue = eventValue;
-      }
+    if (!onChange && !shouldFireChange) {
+      return;
     }
 
-    if (onChange) {
-      const regex = type === 'number' ? /(^$)|(\d+)/ : /.*/;
-      let shouldFireChange: boolean;
+    // apply formatter to transform
+    const newValue = format ? rawValue.map((val) => format(val)) : rawValue;
 
-      // apply formatter to transform
-      if (format) {
-        if (Array.isArray(newValue)) {
-          newValue = newValue.map((val) => format(val));
-        } else {
-          newValue = format(newValue);
-        }
-      }
-      if (Array.isArray(newValue)) {
-        newValue.forEach((val, i) => (newValues[index + i] = val));
-        shouldFireChange = newValue.every((val) => regex.test(val));
-      } else {
-        newValues[index] = newValue;
-        shouldFireChange = regex.test(newValue);
-      }
-      if (shouldFireChange) {
-        onChange(newValue, index, newValues);
+    if (newValue.length) {
+      newValue.forEach((val, idx) => (newValues[index + idx] = val));
+    } else {
+      newValues[index] = '';
+    }
 
-        // auto-tab to the specified pin input
-        let inputEl: Element = inputRef.current;
-        for (let i = 0; i < newValue.length; i++) {
-          inputEl = inputEl.nextElementSibling;
-        }
-        if (newValue && autoTab && inputEl instanceof HTMLInputElement) {
-          inputEl.focus();
-        }
-      }
+    onChange(newValue, index, newValues);
+
+    // auto-tab to the specified pin input
+    let inputEl: Element = inputRef.current;
+    for (let i = 0; i < newValue.length; i++) {
+      inputEl = inputEl.nextElementSibling;
+    }
+
+    if (newValue && autoTab && inputEl instanceof HTMLInputElement) {
+      inputEl.focus();
     }
   };
   const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
