@@ -83,21 +83,21 @@ describe('Pin Input', () => {
   });
 
   it('should call change if it exist', () => {
-    const mockChangeHandler = jest.fn()
+    const mockChangeHandler = jest.fn();
 
     const { getAllByRole } = render(
-      <PinInput onChange={mockChangeHandler} values={['', '']}/>
-    )
+      <PinInput onChange={mockChangeHandler} values={['', '']} />
+    );
 
-    expect(mockChangeHandler).not.toBeCalled()
+    expect(mockChangeHandler).not.toBeCalled();
 
-    const PinInputFields = getAllByRole('textbox')
-    fireEvent.change(PinInputFields[0], { target: { value: '0' } })
-    fireEvent.change(PinInputFields[0], { target: { value: 'a' } })
-    fireEvent.change(PinInputFields[0], { target: { value: '' } })
+    const PinInputFields = getAllByRole('textbox');
+    fireEvent.change(PinInputFields[0], { target: { value: '0' } });
+    fireEvent.change(PinInputFields[0], { target: { value: 'a' } });
+    fireEvent.change(PinInputFields[0], { target: { value: '' } });
 
-    expect(mockChangeHandler).toBeCalled()
-  })
+    expect(mockChangeHandler).toBeCalled();
+  });
 
   it('should call focus and blur callback if they exist', () => {
     const mockKeydownHandler = jest.fn();
@@ -117,7 +117,7 @@ describe('Pin Input', () => {
     expect(mockFocusHandler).not.toBeCalled();
     expect(mockBlurHandler).not.toBeCalled();
 
-    fireEvent.change(PinInputFields[0], { target: { value: '0' } })
+    fireEvent.change(PinInputFields[0], { target: { value: '0' } });
 
     PinInputFields[1].focus();
     fireEvent.keyDown(PinInputFields[1], {
