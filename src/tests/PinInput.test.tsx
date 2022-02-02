@@ -2,8 +2,9 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import { fireEvent, render } from '@testing-library/react';
-import PinInput, { defaultProps } from '../components/PinInput';
+import PinInput from '../components/PinInput';
 import StatefulPinInput from '../components/StatefulPinInput';
+import { pinInputDefaultProps } from '../constants';
 
 describe('Pin Input', () => {
   it('should contain 4 inputs', () => {
@@ -249,7 +250,7 @@ describe('Pin Input', () => {
     const PinInputFields = getAllByRole('textbox') as HTMLInputElement[];
 
     expect(PinInputFields[0]).toHaveStyle(
-      `border-color: ${defaultProps.validBorderColor}`
+      `border-color: ${pinInputDefaultProps.validBorderColor}`
     );
 
     rerender(
@@ -261,13 +262,13 @@ describe('Pin Input', () => {
     );
 
     expect(PinInputFields[3]).toHaveStyle(
-      `border-color: ${defaultProps.errorBorderColor}`
+      `border-color: ${pinInputDefaultProps.errorBorderColor}`
     );
 
     rerender(<PinInput values={['', '', '', '']} borderColor="#ccccccc" />);
 
     expect(PinInputFields[0]).toHaveStyle(
-      `border-color: ${defaultProps.borderColor}`
+      `border-color: ${pinInputDefaultProps.borderColor}`
     );
 
     rerender(
@@ -275,7 +276,7 @@ describe('Pin Input', () => {
     );
     fireEvent.click(PinInputFields[0]);
     expect(PinInputFields[0]).toHaveStyle(
-      `border-color: ${defaultProps.borderColor}`
+      `border-color: ${pinInputDefaultProps.borderColor}`
     );
   });
 
@@ -290,7 +291,7 @@ describe('Pin Input', () => {
 
     expect(tree).toMatchSnapshot();
     expect(PinInputFields[0]).toHaveStyle(
-      `border-color: ${defaultProps.borderColor}`
+      `border-color: ${pinInputDefaultProps.borderColor}`
     );
   });
 
