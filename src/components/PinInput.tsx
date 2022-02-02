@@ -4,6 +4,7 @@ import { PinInputContainer } from '../styles/PinInput';
 import { PinInputProps } from '../types/PinInput';
 import PinInputField from './PinInputField';
 import { validateToPattern } from '../utils';
+import { pinInputDefaultProps } from '../constants';
 
 const propTypes = {
   values: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -22,24 +23,6 @@ const propTypes = {
   containerStyle: PropTypes.object,
   inputStyle: PropTypes.object,
   onChange: PropTypes.func,
-};
-
-export const defaultProps: Partial<PinInputProps> = {
-  type: 'number',
-  mask: false,
-  showState: true,
-  size: 'md',
-  autoFocus: false,
-  autoTab: true,
-  borderColor: 'rgb(204,204,204)',
-  errorBorderColor: 'rgb(220,53,69)',
-  focusBorderColor: 'rgb(13,110,253)',
-  validBorderColor: 'rgb(25,135,84)',
-  containerStyle: {},
-  inputStyle: {},
-  autoComplete: 'off',
-  placeholder: 'o',
-  'aria-label': 'Please enter pin code',
 };
 
 const PinInput: React.FC<PinInputProps> = (props) => {
@@ -79,6 +62,6 @@ const PinInput: React.FC<PinInputProps> = (props) => {
 
 PinInput.displayName = 'PinInput';
 PinInput.propTypes = propTypes;
-PinInput.defaultProps = defaultProps;
+PinInput.defaultProps = pinInputDefaultProps;
 
 export default PinInput;

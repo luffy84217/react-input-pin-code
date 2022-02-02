@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { defaultProps } from '../components/PinInput';
+import { pinInputDefaultProps } from '../constants';
 import { colorParser } from '../utils';
 
 export const Input = styled.input<{
@@ -57,7 +57,9 @@ export const Input = styled.input<{
   border-color: ${({ borderColor }) => {
     const rgb = colorParser(borderColor);
 
-    return rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.borderColor;
+    return rgb
+      ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
+      : pinInputDefaultProps.borderColor;
   }};
   background-color: inherit;
   box-sizing: border-box;
@@ -67,7 +69,7 @@ export const Input = styled.input<{
 
       return rgb
         ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
-        : defaultProps.focusBorderColor;
+        : pinInputDefaultProps.focusBorderColor;
     }};
     box-shadow: ${({ focusBorderColor }) => focusBorderColor} 0px 0px 0px 1px;
   }
@@ -80,15 +82,19 @@ export const Input = styled.input<{
     return completed && showState
       ? `&:valid {
     border-color: ${
-      rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.validBorderColor
+      rgb
+        ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
+        : pinInputDefaultProps.validBorderColor
     };
     box-shadow: ${
-      rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.validBorderColor
+      rgb
+        ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
+        : pinInputDefaultProps.validBorderColor
     } 0px 0px 0px 1px;
     background-color: ${
       rgb
         ? `rgba(${rgb.r},${rgb.g},${rgb.b},0.1)`
-        : defaultProps.validBorderColor
+        : pinInputDefaultProps.validBorderColor
             .replace('rgb', 'rgba')
             .replace(')', ',0.1)')
     };
@@ -101,15 +107,19 @@ export const Input = styled.input<{
     return showState
       ? `&:invalid {
     border-color: ${
-      rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.errorBorderColor
+      rgb
+        ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
+        : pinInputDefaultProps.errorBorderColor
     };
     box-shadow: ${
-      rgb ? `rgb(${rgb.r},${rgb.g},${rgb.b})` : defaultProps.errorBorderColor
+      rgb
+        ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
+        : pinInputDefaultProps.errorBorderColor
     } 0px 0px 0px 1px;
     background-color: ${
       rgb
         ? `rgba(${rgb.r},${rgb.g},${rgb.b},0.1)`
-        : defaultProps.errorBorderColor
+        : pinInputDefaultProps.errorBorderColor
             .replace('rgb', 'rgba')
             .replace(')', ',0.1)')
     };
