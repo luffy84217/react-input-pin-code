@@ -72,7 +72,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
     const rawValue: string[] = normalizeNewValue(
       currentValue,
       eventValue
-    ).slice(0, newValues.length);
+    ).slice(0, newValues.length - index);
     const regex = type === 'number' ? /(^$)|(\d+)/ : /.*/;
     const shouldFireChange: boolean = rawValue.every((val) => regex.test(val));
 
