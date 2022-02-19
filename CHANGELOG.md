@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/luffy84217/react-input-pin-code/compare/v1.1.3...v1.1.4) (2022-02-19)
+
+
+### Bug Fixes
+
+* **components:** Avoid to increase inputs ([9a9b49e](https://github.com/luffy84217/react-input-pin-code/commit/9a9b49e85210a10a32ef014a974633f66dcafd12))
+
 ### [1.1.3](https://github.com/luffy84217/react-input-pin-code/compare/v1.1.2...v1.1.3) (2022-02-08)
 
 
