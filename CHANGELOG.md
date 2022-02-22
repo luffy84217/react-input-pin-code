@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/luffy84217/react-input-pin-code/compare/v1.1.4...v1.1.5) (2022-02-22)
+
+
+### Bug Fixes
+
+* **components:** aria-describedby attribute don’t adds to DOM tree ([#29](https://github.com/luffy84217/react-input-pin-code/issues/29)) ([d9e3814](https://github.com/luffy84217/react-input-pin-code/commit/d9e38149c3aa42b46b3f2e0008d89602311535bc))
+
 ### [1.1.4](https://github.com/luffy84217/react-input-pin-code/compare/v1.1.3...v1.1.4) (2022-02-19)
 
 
