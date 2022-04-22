@@ -71,6 +71,14 @@ IDAndName.args = {
   name: 'bar',
 };
 
+export const ClassName = Template.bind({});
+
+ClassName.args = {
+  values: ['', '', '', ''],
+  containerClassName: 'pin-field-container',
+  inputClassName: 'pin-field',
+};
+
 export const Validation = Template.bind({});
 
 Validation.args = {

@@ -10,7 +10,9 @@ export type PinInputProps = {
   showState?: boolean;
   autoFocus?: boolean;
   autoTab?: boolean;
+  containerClassName?: string;
   containerStyle?: React.CSSProperties;
+  inputClassName?: string;
   inputStyle?: React.CSSProperties;
   borderColor?: string;
   errorBorderColor?: string;
