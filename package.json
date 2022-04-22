@@ -1,6 +1,6 @@
 {
   "name": "react-input-pin-code",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "Pin input built with React component and styled-components",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

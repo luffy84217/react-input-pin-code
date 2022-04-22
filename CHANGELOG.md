@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/luffy84217/react-input-pin-code/compare/v1.1.5...v1.2.0) (2022-04-22)
+
+
+### Features
+
+* Add custom `className` props ([#41](https://github.com/luffy84217/react-input-pin-code/issues/41)) ([5997832](https://github.com/luffy84217/react-input-pin-code/commit/59978320d65f9d541bf1a8725660e6f647a5855e))
+
 ### [1.1.5](https://github.com/luffy84217/react-input-pin-code/compare/v1.1.4...v1.1.5) (2022-02-22)
 
 
