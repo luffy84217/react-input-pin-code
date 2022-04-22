@@ -70,9 +70,9 @@ Filling one character at a time for each input. When a character is entered, the
 
 `PinInput` expects an array of strings for the `values` prop. The number of input fields rendered is equal to the length of the array.
 
-## Passing id and name
+## Passing id, className and name
 
-You can pass `id` or `name` prop. name will be shared amongst the inputs, which means they will each have their name set to this value. id will append an index to any string you provide and pass to the corresponding input. For example, if you pass foo as id and bar as name and there are four inputs, the resulting ids are **foo-0**, **foo-1**, **foo-2**, and **foo-3** and each input has the name bar.
+You can pass `id` or `name` or `containerClassName` or `inputClassName` prop.ClassName and name will be shared amongst the inputs, which means they will each have their name set to this value, it is comfortable for the use of pseudo element in `global.css` file. id will append an index to any string you provide and pass to the corresponding input. For example, if you pass foo as id and bar as name and there are four inputs, the resulting ids are **foo-0**, **foo-1**, **foo-2**, and **foo-3** and each input has the name bar.
 
 ## Size of input
 

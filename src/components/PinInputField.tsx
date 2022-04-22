@@ -53,6 +53,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
   name,
   placeholder,
   required,
+  inputClassName,
   inputStyle,
   borderColor,
   errorBorderColor,
@@ -152,6 +153,7 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       disabled={disabled}
       name={name}
       id={id && `${id}-${index}`}
+      className={inputClassName}
       inputMode={inputMode || (type === 'number' ? 'numeric' : 'text')}
       required={required}
       placeholder={placeholder}

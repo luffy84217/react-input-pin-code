@@ -20,7 +20,9 @@ const propTypes = {
   size: PropTypes.oneOf<'xs' | 'sm' | 'md' | 'lg'>(['xs', 'sm', 'md', 'lg']),
   autoFocus: PropTypes.bool,
   autoTab: PropTypes.bool,
+  containerClassName: PropTypes.string,
   containerStyle: PropTypes.object,
+  inputClassName: PropTypes.string,
   inputStyle: PropTypes.object,
   onChange: PropTypes.func,
 };
@@ -46,7 +48,10 @@ const PinInput: React.FC<PinInputProps> = (props) => {
   }
 
   return (
-    <PinInputContainer style={props.containerStyle}>
+    <PinInputContainer
+      className={props.containerClassName}
+      style={props.containerStyle}
+    >
       {props.values.map((value, i) => (
         <PinInputField
           key={props.id ? `${props.id}-${i}` : i}
