@@ -181,7 +181,9 @@ export default () => {
 | required | boolean |  | Renders component in required state. |
 | showState | boolean | true | Determine whether valid/invalid border shows up or not. |
 | size | "xs" &#124; "sm" &#124; "md" &#124; "lg" | "md" | Renders component in provided size. |
+| containerClassName | string |  | Lets you append custom class to container element. |
 | containerStyle | object | {} | Lets you customize container element. |
+| inputClassName | string |  | Lets you append custom class to input element. |
 | inputStyle | object | {} | Lets you customize input element. |
 | type | "number" &#124; "text" | "number" | The type of values the pin-input should allow |
 | validate | string &#124; string[] &#124; RegExp |  | A regular expression which the input's value must match in order for the value to pass [constraint validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Constraint_validation). |
