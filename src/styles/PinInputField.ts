@@ -3,16 +3,16 @@ import { pinInputDefaultProps } from '../constants';
 import { colorParser } from '../utils';
 
 export const Input = styled.input<{
-  completed: boolean;
-  showState: boolean;
-  sizing: 'xs' | 'sm' | 'md' | 'lg';
-  borderColor: string;
-  errorBorderColor: string;
-  focusBorderColor: string;
-  validBorderColor: string;
+  $completed: boolean;
+  $showState: boolean;
+  $sizing: 'xs' | 'sm' | 'md' | 'lg';
+  $borderColor: string;
+  $errorBorderColor: string;
+  $focusBorderColor: string;
+  $validBorderColor: string;
 }>`
-  width: ${({ sizing }) => {
-    switch (sizing) {
+  width: ${({ $sizing }) => {
+    switch ($sizing) {
       case 'xs':
         return '1.5rem';
       case 'sm':
@@ -23,8 +23,8 @@ export const Input = styled.input<{
         return '3rem';
     }
   }};
-  height: ${({ sizing }) => {
-    switch (sizing) {
+  height: ${({ $sizing }) => {
+    switch ($sizing) {
       case 'xs':
         return '1.5rem';
       case 'sm':
@@ -38,8 +38,8 @@ export const Input = styled.input<{
   margin-right: 0.375rem;
   outline: transparent solid 2px;
   outline-offset: 2px;
-  font-size: ${({ sizing }) => {
-    switch (sizing) {
+  font-size: ${({ $sizing }) => {
+    switch ($sizing) {
       case 'xs':
         return '0.75rem';
       case 'sm':
@@ -54,8 +54,8 @@ export const Input = styled.input<{
   border-radius: 0.375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: ${({ borderColor }) => {
-    const rgb = colorParser(borderColor);
+  border-color: ${({ $borderColor }) => {
+    const rgb = colorParser($borderColor);
 
     return rgb
       ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
@@ -64,22 +64,22 @@ export const Input = styled.input<{
   background-color: inherit;
   box-sizing: border-box;
   &:focus {
-    border-color: ${({ focusBorderColor }) => {
-      const rgb = colorParser(focusBorderColor);
+    border-color: ${({ $focusBorderColor }) => {
+      const rgb = colorParser($focusBorderColor);
 
       return rgb
         ? `rgb(${rgb.r},${rgb.g},${rgb.b})`
         : pinInputDefaultProps.focusBorderColor;
     }};
-    box-shadow: ${({ focusBorderColor }) => focusBorderColor} 0px 0px 0px 1px;
+    box-shadow: ${({ $focusBorderColor }) => $focusBorderColor} 0px 0px 0px 1px;
   }
   &:last-child {
     margin-right: 0;
   }
-  ${({ completed, showState, validBorderColor }) => {
-    const rgb = colorParser(validBorderColor);
+  ${({ $completed, $showState, $validBorderColor }) => {
+    const rgb = colorParser($validBorderColor);
 
-    return completed && showState
+    return $completed && $showState
       ? `&:valid {
     border-color: ${
       rgb
@@ -101,10 +101,10 @@ export const Input = styled.input<{
   }`
       : '';
   }}
-  ${({ showState, errorBorderColor }) => {
-    const rgb = colorParser(errorBorderColor);
+  ${({ $showState, $errorBorderColor }) => {
+    const rgb = colorParser($errorBorderColor);
 
-    return showState
+    return $showState
       ? `&:invalid {
     border-color: ${
       rgb

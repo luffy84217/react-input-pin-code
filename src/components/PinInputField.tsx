@@ -163,14 +163,14 @@ const PinInputField: React.FC<PinInputFieldProps> = ({
       onKeyDown={handleKeyDown}
       onFocus={handleInputFocus}
       onBlur={handleInputBlur}
-      completed={completed}
-      showState={showState}
-      sizing={size}
+      $completed={completed}
+      $showState={showState}
+      $sizing={size}
       style={inputStyle}
-      borderColor={borderColor}
-      errorBorderColor={errorBorderColor}
-      focusBorderColor={focusBorderColor}
-      validBorderColor={validBorderColor}
+      $borderColor={borderColor}
+      $errorBorderColor={errorBorderColor}
+      $focusBorderColor={focusBorderColor}
+      $validBorderColor={validBorderColor}
       data-index={index}
     />
   );
