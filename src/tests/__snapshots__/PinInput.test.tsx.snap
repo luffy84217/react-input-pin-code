@@ -2,13 +2,7 @@
 
 exports[`Pin Input should render correct style when border color is provided 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -123,13 +117,7 @@ exports[`Pin Input should render correct style when border color is provided 1`]
 
 exports[`Pin Input should render correct style when border color is provided 2`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -248,13 +236,7 @@ exports[`Pin Input should render correct style when border color is provided 2`]
 
 exports[`Pin Input should render correct style when size is provided 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -363,13 +345,7 @@ exports[`Pin Input should render correct style when size is provided 1`] = `
 
 exports[`Pin Input should render correct style when size is provided 2`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -478,13 +454,7 @@ exports[`Pin Input should render correct style when size is provided 2`] = `
 
 exports[`Pin Input should render correct style when size is provided 3`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -593,13 +563,7 @@ exports[`Pin Input should render correct style when size is provided 3`] = `
 
 exports[`Pin Input should render correct style when size is provided 4`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -708,13 +672,7 @@ exports[`Pin Input should render correct style when size is provided 4`] = `
 
 exports[`Pin Input should render correct when showState is false 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
