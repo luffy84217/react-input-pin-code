@@ -1,68 +1,88 @@
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from 'rollup-plugin-typescript2';
-import { babel } from '@rollup/plugin-babel';
-import { terser } from 'rollup-plugin-terser';
-import pkgJson from './package.json';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-export default [
-  // CommonJS
-  {
-    input: 'src/index.ts',
-    plugins: [
-      typescript({ useTsconfigDeclarationDir: true }),
-      peerDepsExternal(),
-      resolve(),
-      commonjs(),
-      babel({
-        babelHelpers: 'runtime',
-        exclude: 'node_modules/**',
-      }),
-    ],
-    external: [/@babel\/runtime/],
-    output: [
-      {
-        file: pkgJson.main,
-        format: 'cjs',
-        globals: {
-          react: 'React',
-        },
-      },
-      {
-        file: pkgJson.main.replace('.js', '.min.js'),
-        format: 'cjs',
-        globals: {
-          react: 'React',
-        },
-        plugins: [terser()],
-      },
-    ],
-  },
-  // ESM
-  {
-    input: 'src/index.ts',
-    plugins: [
-      typescript({ useTsconfigDeclarationDir: true }),
-      peerDepsExternal(),
-      resolve(),
-    ],
-    output: [
-      {
-        file: pkgJson.module,
+import commonjs from '@rollup/plugin-commonjs';
+import image from '@rollup/plugin-image';
+import nodeResolve from '@rollup/plugin-node-resolve';
+import { glob } from 'glob';
+import { defineConfig } from 'rollup';
+import copy from 'rollup-plugin-copy';
+import del from 'rollup-plugin-delete';
+import { dts } from 'rollup-plugin-dts';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
+import typescript2 from 'rollup-plugin-typescript2';
+
+// import { generateScopedName } from './.rollup/postcss';
+
+const config = async () => {
+  const indexTsFileList = await glob('./src/**/index.ts');
+  const indexInput = Object.fromEntries(
+    indexTsFileList.map(filename => [
+      path.relative(
+        'src',
+        filename.slice(0, filename.length - path.extname(filename).length),
+      ),
+      fileURLToPath(new URL(filename, import.meta.url)),
+    ]),
+  );
+  const tsconfigBuildFilename = 'tsconfig.build.json';
+
+  return defineConfig([
+    {
+      input: indexInput,
+      output: {
+        dir: 'dist',
         format: 'esm',
-        globals: {
-          react: 'React',
-        },
+        entryFileNames: '[name].js',
+        chunkFileNames: 'chunks/[name]-[hash].js',
+        sourcemap: true,
       },
-      {
-        file: pkgJson.module.replace('.js', '.min.js'),
+      plugins: [
+        peerDepsExternal(),
+        nodeResolve(),
+        commonjs(),
+        image(),
+        postcss({
+          extract: false,
+          sourceMap: true,
+          use: ['sass'],
+          modules: true,
+          autoModules: false,
+        }),
+        typescript2({
+          tsconfig: tsconfigBuildFilename,
+        }),
+        del({
+          targets: 'dist/*',
+        }),
+        copy({
+          targets: [
+            {
+              src: 'src/styles',
+              dest: 'dist',
+            },
+          ],
+        }),
+      ],
+      external: ['react', 'react-dom'],
+    },
+    {
+      input: indexInput,
+      output: {
+        dir: 'dist',
         format: 'esm',
-        globals: {
-          react: 'React',
-        },
-        plugins: [terser()],
+        sourcemap: true,
       },
-    ],
-  },
-];
+      plugins: [
+        nodeResolve(),
+        commonjs(),
+        dts({
+          tsconfig: tsconfigBuildFilename,
+        }),
+      ],
+    },
+  ]);
+};
+
+export default config;
