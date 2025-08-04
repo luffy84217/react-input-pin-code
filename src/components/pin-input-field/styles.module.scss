@@ -1,0 +1,61 @@
+input.inputWrapper {
+  &.isExtraSmall {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  &.isSmall {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.875rem;
+  }
+
+  &.isMedium {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  &.isLarge {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.125rem;
+  }
+  margin-right: 0.375rem;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  text-align: center;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--ripc-input-border-color);
+  background-color: inherit;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: var(--ripc-focus-input-border-color);
+    box-shadow: var(--ripc-focus-input-border-color) 0px 0px 0px 1px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  
+  &.hasCompleted.showState:valid {
+    border-color: var(--ripc-valid-input-border-color);
+    box-shadow: var(--ripc-valid-input-border-color) 0px 0px 0px 1px;
+    background-color: var(--ripc-valid-input-background-color);
+  }
+  
+  &.showState:invalid {
+    border-color: var(--ripc-error-input-border-color);
+    box-shadow: var(--ripc-error-input-border-color) 0px 0px 0px 1px;
+    background-color: var(--ripc-error-input-background-color);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

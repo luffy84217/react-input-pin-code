@@ -1,0 +1,1 @@
+export { validateToPattern } from './utils';

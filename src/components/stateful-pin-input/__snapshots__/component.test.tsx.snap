@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component: StatefulPinInput renders component 1`] = `
+<DocumentFragment>
+  <div
+    class="pinCodeContainer"
+  >
+    <input
+      aria-label="Please enter pin code"
+      autocomplete="off"
+      class="inputWrapper isMedium hasCompleted showState"
+      data-index="0"
+      inputmode="numeric"
+      placeholder="o"
+      type="text"
+      value="1"
+    />
+    <input
+      aria-label="Please enter pin code"
+      autocomplete="off"
+      class="inputWrapper isMedium hasCompleted showState"
+      data-index="1"
+      inputmode="numeric"
+      placeholder="o"
+      type="text"
+      value="2"
+    />
+    <input
+      aria-label="Please enter pin code"
+      autocomplete="off"
+      class="inputWrapper isMedium hasCompleted showState"
+      data-index="2"
+      inputmode="numeric"
+      placeholder="o"
+      type="text"
+      value="3"
+    />
+    <input
+      aria-label="Please enter pin code"
+      autocomplete="off"
+      class="inputWrapper isMedium hasCompleted showState"
+      data-index="3"
+      inputmode="numeric"
+      placeholder="o"
+      type="text"
+      value="4"
+    />
+  </div>
+</DocumentFragment>
+`;

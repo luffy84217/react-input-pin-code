@@ -1,0 +1,22 @@
+$input-border-color-css-var: --ripc-input-border-color;
+$input-focus-border-color-css-var: --ripc-focus-input-border-color;
+$input-focus-background-color-css-var: --ripc-focus-input-background-color;
+$input-error-border-color-css-var: --ripc-error-input-border-color;
+$input-error-background-color-css-var: --ripc-error-input-background-color;
+$input-valid-border-color-css-var: --ripc-valid-input-border-color;
+$input-valid-background-color-css-var: --ripc-valid-input-background-color;
+
+div.pinCodeContainer {
+  display: flex;
+  align-items: center;
+}
+
+:export {
+  inputBorderColorCssVar: $input-border-color-css-var;
+  inputFocusBorderColorCssVar: $input-focus-border-color-css-var;
+  inputFocusBackgroundColorCssVar: $input-focus-background-color-css-var;
+  inputErrorBorderColorCssVar: $input-error-border-color-css-var;
+  inputErrorBackgroundColorCssVar: $input-error-background-color-css-var;
+  inputValidBorderColorCssVar: $input-valid-border-color-css-var;
+  inputValidBackgroundColorCssVar: $input-valid-background-color-css-var;
+}

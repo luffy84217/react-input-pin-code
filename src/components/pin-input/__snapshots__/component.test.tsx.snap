@@ -1,0 +1,390 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component: PinInput renders component 1`] = `
+<DocumentFragment>
+  <div
+    class="pinCodeContainer"
+  >
+    <input
+      aria-label="Please enter pin code"
+      autocomplete="off"
+      class="inputWrapper isMedium hasCompleted showState"
+      data-index="0"
+      inputmode="numeric"
+      placeholder="o"
+      type="text"
+      value="1"
+    />
+    <input
+      aria-label="Please enter pin code"
+      autocomplete="off"
+      class="inputWrapper isMedium hasCompleted showState"
+      data-index="1"
+      inputmode="numeric"
+      placeholder="o"
+      type="text"
+      value="2"
+    />
+    <input
+      aria-label="Please enter pin code"
+      autocomplete="off"
+      class="inputWrapper isMedium hasCompleted showState"
+      data-index="2"
+      inputmode="numeric"
+      placeholder="o"
+      type="text"
+      value="3"
+    />
+    <input
+      aria-label="Please enter pin code"
+      autocomplete="off"
+      class="inputWrapper isMedium hasCompleted showState"
+      data-index="3"
+      inputmode="numeric"
+      placeholder="o"
+      type="text"
+      value="4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`component: PinInput should render correct style when size is provided 1`] = `
+<div
+  className="pinCodeContainer"
+  style={{}}
+>
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isExSmall showState"
+    data-index={0}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isExSmall showState"
+    data-index={1}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isExSmall showState"
+    data-index={2}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isExSmall showState"
+    data-index={3}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`component: PinInput should render correct style when size is provided 2`] = `
+<div
+  className="pinCodeContainer"
+  style={{}}
+>
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isSmall showState"
+    data-index={0}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isSmall showState"
+    data-index={1}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isSmall showState"
+    data-index={2}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isSmall showState"
+    data-index={3}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`component: PinInput should render correct style when size is provided 3`] = `
+<div
+  className="pinCodeContainer"
+  style={{}}
+>
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isMedium showState"
+    data-index={0}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isMedium showState"
+    data-index={1}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isMedium showState"
+    data-index={2}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isMedium showState"
+    data-index={3}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`component: PinInput should render correct style when size is provided 4`] = `
+<div
+  className="pinCodeContainer"
+  style={{}}
+>
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isLarge showState"
+    data-index={0}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isLarge showState"
+    data-index={1}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isLarge showState"
+    data-index={2}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isLarge showState"
+    data-index={3}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`component: PinInput should render correct when showState is false 1`] = `
+<div
+  className="pinCodeContainer"
+  style={{}}
+>
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isMedium hasCompleted"
+    data-index={0}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value="1"
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isMedium hasCompleted"
+    data-index={1}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value="2"
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isMedium hasCompleted"
+    data-index={2}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value="3"
+  />
+  <input
+    aria-label="Please enter pin code"
+    autoComplete="off"
+    className="inputWrapper isMedium hasCompleted"
+    data-index={3}
+    inputMode="numeric"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    placeholder="o"
+    style={{}}
+    type="text"
+    value="4"
+  />
+</div>
+`;

@@ -1,0 +1,1 @@
+export { useCssVariable } from './use-css-variable';
