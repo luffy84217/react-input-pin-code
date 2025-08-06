@@ -1,6 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [2.0.0](https://github.com/luffy84217/react-input-pin-code/compare/v1.2.1...v2.0.0) (2025-08-06)
+
+
+### Features
+
+* remove styled-components and replace with postcss and refactor ([#78](https://github.com/luffy84217/react-input-pin-code/issues/78)) ([1a8bf88](https://github.com/luffy84217/react-input-pin-code/commit/1a8bf88d8bf9db0d374ab91f2d3c6d08239b38eb))
 
 ### [1.2.1](https://github.com/luffy84217/react-input-pin-code/compare/v1.2.0...v1.2.1) (2023-11-26)
 
