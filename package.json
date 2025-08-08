@@ -9,6 +9,7 @@
     "url": "git://github.com/luffy84217/react-input-pin-code.git"
   },
   "homepage": "https://luffy84217.github.io/react-input-pin-code/",
+  "license": "MIT",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
